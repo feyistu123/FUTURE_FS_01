@@ -14,10 +14,12 @@ export default function About() {
             I am a motivated Full Stack Developer with experience building responsive React applications and RESTful APIs using Node.js, Express, and MongoDB.
             My work is driven by clear communication, reliable delivery, and practical problem solving.
           </p>
+          <br />
           <p>
             I enjoy turning ideas into polished products and collaborating with teams that value modern web practices, accessibility, and performance.
             I also explore AI and machine learning to keep my projects forward-looking and useful.
           </p>
+          <br />
           <p>
             I am currently focused on building maintainable applications that solve real problems while demonstrating strong front-end design and backend system thinking.
           </p>

@@ -1,4 +1,5 @@
 import { profile, skills } from '../data/model';
+import profileImage from '../assets/profile.jpg';
 
 export default function Home() {
   return (
@@ -13,13 +14,16 @@ export default function Home() {
       </p>
 
       <div className="profile-card">
-        <div>
-          <strong>{profile.title}</strong>
-          <p>{profile.study}</p>
-        </div>
-        <div>
-          <strong>Location</strong>
-          <p>{profile.location}</p>
+        <img src={profileImage} alt="Feyistu Endale" className="profile-image" />
+        <div className="profile-card-text">
+          <div>
+            <strong>{profile.title}</strong>
+            <p>{profile.study}</p>
+          </div>
+          <div>
+            <strong>Location</strong>
+            <p>{profile.location}</p>
+          </div>
         </div>
       </div>
 
