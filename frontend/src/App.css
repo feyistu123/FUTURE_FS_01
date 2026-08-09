@@ -141,11 +141,12 @@
 
   .theme-toggle {
     order: 1;
+    margin-right: 0.75rem;
   }
 
   .mobile-menu-toggle {
     order: 2;
-    margin-left: auto;
+    margin-left: 0;
   }
 
   .site-header {
