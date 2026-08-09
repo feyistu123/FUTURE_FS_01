@@ -338,6 +338,12 @@
   color: white;
 }
 
+.contact-form button.primary {
+  background: #0f46b6;
+  color: white;
+  border: 1px solid #08215b;
+}
+
 .button.secondary {
   background: transparent;
   color: var(--text);

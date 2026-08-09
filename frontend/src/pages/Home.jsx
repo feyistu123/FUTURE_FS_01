@@ -5,7 +5,7 @@ export default function Home() {
     <section className="section home-section" id="home">
       <div className="section-header">
         <p className="section-label">Welcome</p>
-        <h1>{profile.name}</h1>
+        <h2>{profile.name}</h2>
       </div>
       <p className="section-subtitle">
         I create responsive, user-focused web experiences using React, Node.js, and MongoDB.
