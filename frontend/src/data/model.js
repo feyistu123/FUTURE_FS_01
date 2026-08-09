@@ -13,10 +13,10 @@ export const profile = {
 };
 
 export const skills = [
-  'React.js',
+  'React.js & Vite',
   'JavaScript / ES6+',
   'Node.js & Express',
-  'MongoDB Atlas',
+  'MongoDB Atlas & Mongoose',
   'Responsive UI',
   'AI & Machine Learning Enthusiast'
 ];
