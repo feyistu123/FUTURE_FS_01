@@ -9,6 +9,7 @@ import './App.css';
 
 function App() {
   const [theme, setTheme] = useState('light');
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -26,17 +27,30 @@ function App() {
     setTheme((current) => (current === 'dark' ? 'light' : 'dark'));
   };
 
+  const toggleMenu = () => {
+    setMenuOpen((current) => !current);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <Router>
       <div className="app-shell">
         <header className="site-header">
           <div className="nav-inner">
             <div className="brand">{profile.name}</div>
-            <nav className="main-nav">
-              <Link to="/">Home</Link>
-              <Link to="/about">About</Link>
-              <Link to="/projects">Projects</Link>
-              <Link to="/contact">Contact</Link>
+
+            <button className="mobile-menu-toggle" onClick={toggleMenu} aria-label="Toggle navigation">
+              <span className={menuOpen ? 'burger open' : 'burger'} />
+            </button>
+
+            <nav className={menuOpen ? 'main-nav open' : 'main-nav'}>
+              <Link to="/" onClick={closeMenu}>Home</Link>
+              <Link to="/about" onClick={closeMenu}>About</Link>
+              <Link to="/projects" onClick={closeMenu}>Projects</Link>
+              <Link to="/contact" onClick={closeMenu}>Contact</Link>
             </nav>
             <button className="theme-toggle button secondary" onClick={toggleTheme}>
               {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
