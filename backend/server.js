@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import ContactMessage from './models/ContactMessage.js';
 
 dotenv.config();
 
@@ -42,27 +43,15 @@ db.on('error', (error) => {
 });
 db.once('open', () => console.log('Connected to MongoDB Atlas'));
 
-const contactSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  email: { type: String, required: true },
-  message: { type: String, required: true },
-  createdAt: {
-    type: Date,
-    default: Date.now
-  }
-});
-
-const ContactMessage = mongoose.model('ContactMessage', contactSchema);
-
 app.post('/api/contact', async (req, res) => {
-  const { name, email, message } = req.body;
+  const { name, email, message, mode } = req.body;
 
   if (!name || !email || !message) {
     return res.status(400).json({ error: 'Please fill out all required fields.' });
   }
 
   try {
-    const contact = new ContactMessage({ name, email, message });
+    const contact = new ContactMessage({ name, email, message, mode });
     await contact.save();
     res.status(201).json({ message: 'Contact message received.' });
   } catch (error) {
