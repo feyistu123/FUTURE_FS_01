@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import nodemailer from 'nodemailer';
 import ContactMessage from './models/ContactMessage.js';
 
 dotenv.config();
@@ -11,7 +12,48 @@ app.use(cors());
 app.use(express.json());
 
 const port = process.env.PORT || 4000;
-const emailRecipient = process.env.EMAIL_RECIPIENT || 'hello@example.com';
+const emailRecipient = process.env.EMAIL_RECIPIENT || process.env.EMAIL_USER || 'hello@example.com';
+const emailEnabled = Boolean(process.env.EMAIL_USER && process.env.EMAIL_PASS);
+
+let transporter;
+if (emailEnabled) {
+  transporter = nodemailer.createTransport(
+    process.env.EMAIL_HOST
+      ? {
+          host: process.env.EMAIL_HOST,
+          port: Number(process.env.EMAIL_PORT || 587),
+          secure: process.env.EMAIL_SECURE === 'true' || Number(process.env.EMAIL_PORT) === 465,
+          auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS
+          },
+          tls: {
+            rejectUnauthorized: process.env.EMAIL_REJECT_UNAUTHORIZED !== 'false'
+          }
+        }
+      : {
+          host: 'smtp.gmail.com',
+          port: 587,
+          secure: false,
+          auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS
+          },
+          tls: {
+            rejectUnauthorized: false
+          }
+        }
+  );
+
+  transporter.verify().then(() => {
+    console.log('Email transporter successfully configured.');
+  }).catch((error) => {
+    console.error('Error verifying email transporter:', error.message || error);
+  });
+} else {
+  console.warn('Email notification disabled: EMAIL_USER or EMAIL_PASS is missing.');
+}
+
 let dbUri = process.env.MONGODB_URI;
 
 if (!dbUri) {
@@ -53,6 +95,24 @@ app.post('/api/contact', async (req, res) => {
   try {
     const contact = new ContactMessage({ name, email, message, mode });
     await contact.save();
+
+    if (emailEnabled && transporter) {
+      const mailOptions = {
+        from: `Portfolio Contact <${process.env.EMAIL_USER}>`,
+        to: emailRecipient,
+        subject: `New contact message from ${name}`,
+        text: `Name: ${name}\nEmail: ${email}\nMode: ${mode || 'N/A'}\n\nMessage:\n${message}`,
+        html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Mode:</strong> ${mode || 'N/A'}</p><p><strong>Message:</strong></p><p>${message.replace(/\n/g, '<br/>')}</p>`
+      };
+
+      try {
+        await transporter.sendMail(mailOptions);
+        console.log(`Contact notification email sent to ${emailRecipient}`);
+      } catch (emailError) {
+        console.error('Failed to send notification email:', emailError);
+      }
+    }
+
     res.status(201).json({ message: 'Contact message received.' });
   } catch (error) {
     console.error('Failed to save contact message:', error);
