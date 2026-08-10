@@ -367,7 +367,13 @@
   background: #1f4874;
   color: white;
   border: 1px solid #08215b;
-}
+  margin-top: 1.25rem;
+  width: 100%;
+  max-width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  padding: 1rem 1.1rem;
+  }
 
 .button.secondary {
   background: transparent;
