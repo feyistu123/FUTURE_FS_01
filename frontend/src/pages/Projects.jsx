@@ -18,6 +18,18 @@ export default function Projects() {
                 <span key={tag}>{tag}</span>
               ))}
             </div>
+            {project.liveDemo && (
+              <div className="project-card-footer">
+                <a
+                  href={project.liveDemo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="button secondary small"
+                >
+                  Live Demo
+                </a>
+              </div>
+            )}
           </article>
         ))}
       </div>

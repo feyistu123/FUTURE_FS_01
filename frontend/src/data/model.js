@@ -25,7 +25,8 @@ export const projects = [
   {
     title: 'Personal Professional Portfolio Website',
     description: 'A polished portfolio experience built with React and modern UI patterns to showcase skills, projects, and contact flow.',
-    tags: ['React', 'Vite', 'Responsive UI']
+    tags: ['React', 'Vite', 'Responsive UI'],
+    liveDemo: 'https://feyistu-endale-profile.onrender.com/'
   },
   {
     title: 'Client Lead Management System (Mini CRM)',
@@ -35,7 +36,8 @@ export const projects = [
   {
     title: 'Solomon Tutoring',
     description: 'A tutoring platform concept for managing schedules, courses, and service discovery.',
-    tags: ['JavaScript', 'HTML', 'CSS']
+    tags: ['JavaScript', 'HTML', 'CSS'],
+    liveDemo: 'https://solomon-tutoring-frontend.onrender.com'
   },
   {
     title: 'Search Algorithm Visualizer',

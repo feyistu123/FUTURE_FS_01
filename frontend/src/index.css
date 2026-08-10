@@ -168,6 +168,22 @@ h2 {
   font-size: 0.9rem;
 }
 
+  .project-card-footer {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .button.small {
+    padding: 0.55rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .button.secondary.small {
+    border-color: var(--border);
+    background: rgba(255, 255, 255, 0.06);
+  }
+
 .contact-form {
   display: grid;
   gap: 1rem;
