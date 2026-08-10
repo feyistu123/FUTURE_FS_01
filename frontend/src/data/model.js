@@ -47,7 +47,13 @@ export const projects = [
   {
     title: 'Perfume Shopping',
     description: 'A responsive e-commerce concept demonstrating product browsing, filters, and clean product storytelling.',
-    tags: ['HTML', 'CSS', 'JavaScript']
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    galleryImages: [
+      new URL('../assets/perfume_app1.jpg', import.meta.url).href,
+      new URL('../assets/perfume_app2.jpg', import.meta.url).href,
+      new URL('../assets/perfume_app3.jpg', import.meta.url).href,
+      new URL('../assets/perfume_app4.jpg', import.meta.url).href
+    ]
   },
   {
     title: 'Namer App',

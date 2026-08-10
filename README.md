@@ -44,9 +44,14 @@ npm install
 Example `.env` values:
 
 ```env
-MONGODB_URI=mongodb+srv://<user>:<password>@cluster0.mongodb.net/portfolio?retryWrites=true&w=majority
+# MongoDB Atlas Connection
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/?retryWrites=true&w=majority
+
+# Server Configuration
 PORT=4000
-EMAIL_RECIPIENT=hello@example.com
+
+# JWT Secret (for authentication)
+JWT_SECRET=your_jwt_secret_here
 ```
 
 ### 3. Run backend
@@ -71,22 +76,14 @@ The frontend proxies API requests to `http://localhost:4000`.
 ## Deployment Roadmap
 
 1. Build the React app with `npm run build` inside `frontend/`.
-2. Deploy React to Netlify, Vercel, or GitHub Pages.
-3. Deploy backend to Render, Railway, or Heroku.
-4. Set the production MongoDB Atlas URI in the backend environment.
-5. Update the live site URL and repository README.
+2. Deploy it to GitHub and Render Pages.
+3. Set the production MongoDB Atlas URI in the backend environment.
+4. Update the live site URL and repository README.
 
 ## Frontend / Backend Roadmap
 
 1. Complete the React UI for Home, About, Projects, and Contact sections.
 2. Add the Future Interns portfolio and CRM projects to the featured workspace.
 3. Implement the backend contact API and store messages in MongoDB Atlas.
-4. Add authentication or admin dashboard later for CRM lead management.
-5. Connect the contact form to backend POST `/api/contact`.
-6. Deploy frontend and backend to separate hosting services.
-
-## Notes
-
-- Replace placeholder text in the React app with your real profile details.
-- Use MongoDB Atlas to store contact submissions in the cloud.
-- Add live links to your GitHub projects and deployed portfolio.
+4. Connect the contact form to backend POST `/api/contact`.
+5. Deploy frontend and backend to a hosting service.
