@@ -31,13 +31,20 @@ export const projects = [
   {
     title: 'Client Lead Management System (Mini CRM)',
     description: 'A CRM-style app for tracking clients, leads, and follow-up activity, backed by Node.js and MongoDB Atlas.',
-    tags: ['Node.js', 'Express', 'MongoDB']
+    tags: ['Node.js', 'Express', 'MongoDB'],
+    liveDemo: 'https://mini-crm-07g1.onrender.com'
   },
   {
     title: 'Solomon Tutoring',
     description: 'A tutoring platform concept for managing schedules, courses, and service discovery.',
     tags: ['JavaScript', 'HTML', 'CSS'],
     liveDemo: 'https://solomon-tutoring-frontend.onrender.com'
+  },
+  {
+    title: 'Odaa Medium Clinic Website',
+    description: 'A professional medical clinic website built for a real healthcare provider. Features appointment booking, doctor profiles, service descriptions, and health information resources. Successfully pitched and delivered to the clinic owner.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Client Project', 'Healthcare'],
+    liveDemo: 'https://oda-medium-clinic.onrender.com',
   },
   {
     title: 'Search Algorithm Visualizer',
@@ -59,8 +66,7 @@ export const projects = [
     title: 'Ichthys Charity Organization (Full Stack)',
     description: 'A full-stack nonprofit website built with React for the frontend, Node.js/Express for the backend, and MongoDB (Mongoose) for content and donation management. Features: program pages, volunteer sign-up, donation flow, admin content management, and contact forms.',
     tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'Full Stack'],
-    repo: 'https://github.com/feyistu123/ichthys-charity',
-    liveDemo: ''
+    repo: 'https://github.com/feyistu123/Ichthys-charity-organization',
   },
   {
     title: 'Namer App',
