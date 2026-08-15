@@ -87,3 +87,7 @@ The frontend proxies API requests to `http://localhost:4000`.
 3. Implement the backend contact API and store messages in MongoDB Atlas.
 4. Connect the contact form to backend POST `/api/contact`.
 5. Deploy frontend and backend to a hosting service.
+
+🌐 Live Demo
+
+Check out the live version: https://feyistu-endale-profile.onrender.com
