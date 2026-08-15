@@ -66,7 +66,6 @@ export const projects = [
     title: 'Ichthys Charity Organization (Full Stack)',
     description: 'A full-stack nonprofit website built with React for the frontend, Node.js/Express for the backend, and MongoDB (Mongoose) for content and donation management. Features: program pages, volunteer sign-up, donation flow, admin content management, and contact forms.',
     tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'Full Stack'],
-    repo: 'https://github.com/feyistu123/Ichthys-charity-organization',
   },
   {
     title: 'Namer App',
