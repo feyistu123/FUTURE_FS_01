@@ -102,14 +102,23 @@
 
 @media (max-width: 700px) {
   .nav-inner {
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* CHANGED: prevents wrapping */
     justify-content: space-between;
     position: relative;
     padding-bottom: 0.5rem;
+    gap: 0.5rem; /* CHANGED: reduced gap */
+  }
+
+  .brand {
+    font-size: 0.95rem; /* CHANGED: slightly smaller on mobile */
+    flex-shrink: 0; /* CHANGED: prevents shrinking */
   }
 
   .mobile-menu-toggle {
     display: inline-flex;
+    flex-shrink: 0; /* CHANGED: prevents shrinking */
+    width: 38px; /* CHANGED: slightly smaller */
+    height: 38px; /* CHANGED: slightly smaller */
   }
 
   .main-nav {
@@ -141,7 +150,10 @@
 
   .theme-toggle {
     order: 1;
-    margin-right: 0.75rem;
+    margin-right: 0.5rem; /* CHANGED: reduced margin */
+    padding: 0.5rem 0.8rem; /* CHANGED: smaller padding */
+    font-size: 0.8rem; /* CHANGED: smaller font */
+    flex-shrink: 0; /* CHANGED: prevents shrinking */
   }
 
   .mobile-menu-toggle {
@@ -373,7 +385,7 @@
   display: inline-flex;
   justify-content: center;
   padding: 1rem 1.1rem;
-  }
+}
 
 .button.secondary {
   background: transparent;
