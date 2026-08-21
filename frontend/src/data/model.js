@@ -34,13 +34,13 @@ export const projects = [
   {
     title: 'Personal Professional Portfolio Website',
     description: 'A polished portfolio experience built with React and modern UI patterns to showcase skills, projects, and contact flow.',
-    tags: ['React', 'Vite', 'Responsive UI'],
+    tags: ['React', 'Vite', 'Responsive UI', 'Portfolio'],
     liveDemo: 'https://feyistu-endale-profile.onrender.com/'
   },
   {
     title: 'Client Lead Management System (Mini CRM)',
     description: 'A CRM-style app for tracking clients, leads, and follow-up activity, backed by Node.js and MongoDB Atlas.',
-    tags: ['Node.js', 'Express', 'MongoDB'],
+    tags: ['JavaScript', 'Node.js', 'Express', 'MongoDB'],
     liveDemo: 'https://mini-crm-07g1.onrender.com'
   },
   {
@@ -52,7 +52,7 @@ export const projects = [
   {
     title: 'Odaa Medium Clinic Website',
     description: 'A professional medical clinic website built for a real healthcare provider. Features appointment booking, doctor profiles, service descriptions, and health information resources. Successfully pitched and delivered to the clinic owner.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'Client Project', 'Healthcare'],
+    tags: ['React', 'JavaScript', 'PHP', 'Client Project', 'Healthcare'],
     liveDemo: 'https://oda-medium-clinic.onrender.com',
   },
   {
@@ -74,11 +74,11 @@ export const projects = [
   {
     title: 'Ichthys Charity Organization (Full Stack)',
     description: 'A full-stack nonprofit website built with React for the frontend, Node.js/Express for the backend, and MongoDB (Mongoose) for content and donation management. Features: program pages, volunteer sign-up, donation flow, admin content management, and contact forms.',
-    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'Full Stack'],
+    tags: ['React', 'Node.js', 'MongoDB', 'Mongoose', 'Full Stack'],
   },
   {
     title: 'Namer App',
     description: 'A creative name generator utility for brand naming, project ideas, and naming workflows.',
-    tags: ['C++', 'Problem Solving', 'Utility']
+    tags: ['Flutter', 'Dart', 'Android App'],
   }
 ];
