@@ -28,6 +28,7 @@ export default function About() {
         <aside className="about-details card">
           <div>
             <h3>Quick facts</h3>
+            <br />
             <ul>
               <li><strong>Name:</strong> {profile.name}</li>
               <li><strong>Title:</strong> {profile.title}</li>
@@ -38,6 +39,7 @@ export default function About() {
 
           <div className="about-skills">
             <h3>Core skills</h3>
+            <br />
             <div className="skill-list">
               {skills.map((skill) => (
                 <span key={skill}>{skill}</span>

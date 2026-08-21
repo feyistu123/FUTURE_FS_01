@@ -270,10 +270,73 @@
   display: block;
 }
 
+/* Update the about-grid container */
 .about-grid {
+  display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  align-items: start; /* Align items at the top */
 }
 
+/* About copy (left side) - stays static */
+.about-copy {
+  position: sticky;
+  top: 2rem; /* Adjust based on your header height */
+  align-self: start;
+}
+
+/* About details (right side card) - becomes scrollable */
+.about-details {
+  background: var(--surface);
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: 1.75rem;
+  max-height: 500px; /* Set maximum height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Optional: Style the scrollbar for better appearance */
+.about-details::-webkit-scrollbar {
+  width: 6px;
+}
+
+.about-details::-webkit-scrollbar-track {
+  background: var(--surface-soft);
+  border-radius: 10px;
+}
+
+.about-details::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+.about-details::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* For Firefox */
+.about-details {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--surface-soft);
+}
+
+/* Responsive: On mobile, both sections stack */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-copy {
+    position: static; /* Remove sticky on mobile */
+  }
+  
+  .about-details {
+    max-height: 400px; /* Slightly smaller on mobile */
+  }
+}
 .profile-card,
 .home-details,
 .about-details,
