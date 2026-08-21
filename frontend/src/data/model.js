@@ -17,7 +17,14 @@ export const skills = [
   'JavaScript / ES6+',
   'Node.js & Express',
   'MongoDB Atlas & Mongoose',
+  'MySQL',
+  'PostgreSQL',
+  'HTML & CSS',
+  'REST APIs',
+  'Python',
   'Responsive UI',
+  'Git & GitHub',
+  'CapCut & Video Editing',
   'AI & Machine Learning Enthusiast'
 ];
 
