@@ -25,6 +25,8 @@ export const skills = [
   'Responsive UI',
   'Git & GitHub',
   'CapCut & Video Editing',
+  'Flutter & Dart',
+  'Problem Solving Mindset',
   'AI & Machine Learning Enthusiast'
 ];
 
@@ -44,7 +46,7 @@ export const projects = [
   {
     title: 'Solomon Tutoring',
     description: 'A tutoring platform concept for managing schedules, courses, and service discovery.',
-    tags: ['JavaScript', 'HTML', 'CSS'],
+    tags: ['JavaScript', 'Vite', 'Express', 'MongoDB', 'Responsive UI'],
     liveDemo: 'https://solomon-tutoring-frontend.onrender.com'
   },
   {
@@ -60,8 +62,8 @@ export const projects = [
   },
   {
     title: 'Perfume Shopping',
-    description: 'A responsive e-commerce concept demonstrating product browsing, filters, and clean product storytelling.',
-    tags: ['HTML', 'CSS', 'JavaScript'],
+    description: 'A cross-platform mobile app for perfume enthusiasts. Features product catalog, filtering, cart management, and seamless checkout experience. Built with Flutter for Android.',
+    tags: ['Flutter', 'Dart', 'Firebase', 'Mobile App', 'E-commerce'],
     galleryImages: [
       new URL('../assets/perfume_app1.jpg', import.meta.url).href,
       new URL('../assets/perfume_app2.jpg', import.meta.url).href,
