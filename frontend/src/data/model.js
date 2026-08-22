@@ -52,7 +52,7 @@ export const projects = [
   {
     title: 'Odaa Medium Clinic Website',
     description: 'A professional medical clinic website built for a real healthcare provider. Features appointment booking, doctor profiles, service descriptions, and health information resources. Successfully pitched and delivered to the clinic owner.',
-    tags: ['React', 'JavaScript', 'PHP', 'Client Project', 'Healthcare'],
+    tags: ['HTML', 'CSS', 'PHP', 'Client Project', 'Healthcare'],
     liveDemo: 'https://oda-medium-clinic.onrender.com',
   },
   {
